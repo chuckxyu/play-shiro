@@ -2,10 +2,14 @@
 
 # --- !Ups
 
-create table user (
-  email                     varchar(255) not null primary key,
-  password                  varchar(255) not null
-);
+CREATE DATABASE "playshiro"
+    WITH
+    OWNER = icinga
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'en_US.UTF-8'
+    CONNECTION LIMIT = -1;
+
+GRANT ALL ON DATABASE "playshiro" TO icinga;
 
 # --- !Downs
 
