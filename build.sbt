@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
   jdbc,
   "com.typesafe.play" %% "anorm"      % "2.4.0",
   "org.mindrot"        % "jbcrypt"    % "0.3m",
-  "org.apache.shiro"   % "shiro-core" % "1.2.4"
+  "org.apache.shiro"   % "shiro-core" % "1.2.5"
 )
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
