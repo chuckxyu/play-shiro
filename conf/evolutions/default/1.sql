@@ -11,19 +11,19 @@
 # --
 # -- GRANT ALL ON DATABASE "playshiro" TO icinga;
 
-CREATE TABLE subject_data
-(
-    id bigint NOT NULL,
-    nickname character varying(64) NOT NULL,
-    password character varying(256),
-    PRIMARY KEY (id)
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE subject_data
-    OWNER to icinga;
+# -- CREATE TABLE subject_data
+# -- (
+# --     id bigint NOT NULL,
+# --     nickname character varying(64) NOT NULL,
+# --     password character varying(256),
+# --     PRIMARY KEY (id)
+# -- )
+# -- WITH (
+# --     OIDS = FALSE
+# -- )
+# -- TABLESPACE pg_default;
+# --
+# -- ALTER TABLE subject_data
+# --     OWNER to icinga;
 
 # --- !Downs
