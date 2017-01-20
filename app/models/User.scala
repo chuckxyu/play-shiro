@@ -81,12 +81,12 @@ object User {
       implicit connection =>
         SQL(
           """
-            insert into user values (
-              {email}, {password}
+            insert into subject_data (
+              {nickname}, {password}
             )
           """
         ).on(
-          'email -> user.email,
+          'nickname -> user.nickname,
           'password -> Password.encryptPassword(user.password)
         ).executeUpdate()
         user

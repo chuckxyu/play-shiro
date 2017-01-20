@@ -9,7 +9,7 @@
       Current User is
       @currentUser match {
          case Some(user) => {
-               <span style="color: red">@user.email</span>
+               <span style="color: red">@user.nickname</span>
                @helper.form(routes.Application.logout) {
                   <div>
                     <button type="submit">Logout</button>
@@ -27,7 +27,7 @@
 
   <ul>
   @users.map { user =>
-     <li>@user.email</li>
+     <li>@user.nickname</li>
   }
   </ul>
 
