@@ -81,7 +81,7 @@ object User {
       implicit connection =>
         SQL(
           """
-            insert into subject_data (
+            insert into subject_data (nextval('id_seq')
               {nickname}, {password}
             )
           """
