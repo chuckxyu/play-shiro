@@ -16,7 +16,7 @@ import security.Password
  * @since 1/8/12
  */
 
-case class User(email: String, password: String)
+case class User(nickname: String, password: String)
 
 object User {
 
@@ -24,7 +24,7 @@ object User {
    * Parse a User from a ResultSet
    */
   val simple = {
-    get[String]("user.email") ~ get[String]("user.password") map { case email~password => User(email, password) }
+    get[String]("subject_data.nickname") ~ get[String]("subject_data.password") map { case nickname~password => User(nickname, password) }
   }
 
   def findByEmail(email: String): Option[User] = {
@@ -39,7 +39,7 @@ object User {
   def findAll: Seq[User] = {
     DB.withConnection {
       implicit connection =>
-        SQL("select * from user").as(User.simple *)
+        SQL("select * from subject_data").as(User.simple *)
     }
   }
 

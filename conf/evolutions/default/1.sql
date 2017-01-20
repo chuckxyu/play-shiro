@@ -11,7 +11,7 @@
 # --
 # -- GRANT ALL ON DATABASE "playshiro" TO icinga;
 
-CREATE TABLE public.subject_data
+CREATE TABLE subject_data
 (
     id bigint NOT NULL,
     nickname character varying(64) NOT NULL,
@@ -23,7 +23,7 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE public.subject_data
+ALTER TABLE subject_data
     OWNER to icinga;
 
 # --- !Downs
